@@ -1,0 +1,70 @@
+.container.hero {
+  background-image: url("https://frigorificopuertogaboto.com.ar/wp-content/uploads/2024/06/IMG_1342-scaled-1080x608.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+/* .container.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+  pointer-events: none;
+  z-index: 1;
+} */
+
+.content-hero {
+  position: absolute;
+    top: 50%;   
+    left: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  max-width: 900px;
+}
+
+.title-hero {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.description-hero {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button-hero {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.button-hero:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
