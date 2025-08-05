@@ -3,18 +3,63 @@
   margin: 5rem auto;
   padding: 2rem;
   border-radius: 20px;
-  background: #f0f0f3;
-  box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
+  background: #202020;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(50, 50, 50, 0.5);
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  animation: fadeIn 1s ease-in-out;
+  color: white;
+  overflow: hidden;
 }
 
 .cover img {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   margin-bottom: 1rem;
+}
+
+.playlist {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  background: #303030;
+  padding: 0.5rem;
+}
+
+.playlist::-webkit-scrollbar {
+  width: 6px;
+}
+
+.playlist::-webkit-scrollbar-track {
+  background: #202020;
+  border-radius: 10px;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background: #FE6A01;
+  border-radius: 10px;
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+  background: #e05d00;
+}
+
+.playlist-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+  color: white;
+}
+
+.playlist-item:hover {
+  background: #404040;
+}
+
+.playlist-item.selected {
+  background: #FE6A01;
+  color: white;
 }
 
 h2 {
@@ -25,41 +70,88 @@ h2 {
 
 p {
   margin: 0;
-  color: #555;
+  color: #aaa;
   font-size: 0.9rem;
 }
 
 .controls {
   display: flex;
-  justify-content: space-around;
-  margin-top: 1.2rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.2rem 0;
 }
 
 .controls button {
-  background: #e0e0e0;
+  background: #303030;
   border: none;
-  padding: 1rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   font-size: 1.2rem;
-  box-shadow: 4px 4px 8px #ccc, -4px -4px 8px #fff;
+  color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(80, 80, 80, 0.3);
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .controls button:hover {
-  background: #d2d2d2;
+  background: #404040;
 }
 
 .progress {
-  background: #ccc;
+  background: #303030;
   height: 8px;
   border-radius: 4px;
   overflow: hidden;
   margin: 1rem 0;
+  cursor: pointer;
 }
 
 .bar {
   height: 8px;
-  background: #4caf50;
+  background: #FE6A01;
   transition: width 0.2s linear;
+}
+
+.secondary-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.volume-icon {
+  color: #FE6A01;
+  font-size: 1.2rem;
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+  accent-color: #FE6A01;
+}
+
+.playlist-toggle {
+  background: #FE6A01;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.8rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.playlist-toggle:hover {
+  background: #e05d00;
 }
